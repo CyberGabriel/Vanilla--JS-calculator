@@ -1,0 +1,126 @@
+html,
+body {
+    height: 100%;
+    font-family: 'Jura', sans-serif;
+}
+
+.background {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(rgb(44, 42, 53) 0%, rgb(0, 0, 0) 100%);
+}
+
+.wrapper {
+    width: 320px;
+    height: 350px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, auto);
+    background-color: rgb(169, 169, 190);
+    border-radius: 12px;
+    box-shadow: 0 0 50px 10px rgba(253, 228, 186, 0.3);
+}
+
+.wrapper > button {
+    font-family: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    border-radius: 32px;
+    outline: none;
+    padding: 0;
+    margin: 5px;
+    transition: all 0.6s ease-in-out;
+    background: linear-gradient(0deg, rgb(175, 184, 197), rgb(218, 225, 238));
+}
+
+.wrapper > button:hover {
+    box-shadow: 0 0 5px 5px rgba(253, 228, 186, 0.4);
+}
+
+.wrapper > button:active {
+    background: linear-gradient(0deg, rgb(180, 196, 219), rgb(110, 118, 134));
+}
+
+.display {
+    height: 75px;
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    background: linear-gradient(to top, rgb(17, 16, 22), rgb(60, 58, 94) 55%, rgb(51, 50, 61) 100%);
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 5px;
+    border-radius: 12px;
+}
+
+.display .past {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.display .previous {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.currentDisplay {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.feedbackDisplay {
+    -webkit-animation: feedbackDisplay 0.2s ease-in-out 2 alternate;
+    -moz-animation: feedbackDisplay 0.2s ease-in-out 2 alternate;
+    animation: feedbackDisplay 0.2s ease-in-out 2 alternate;
+}
+
+@keyframes feedbackDisplay {
+    from {
+        text-shadow: 0 0 0 rgb(253, 228, 186);
+        font-size: 1.8rem;
+    }
+    to {
+        text-shadow: 0 0 10px rgb(253, 228, 186);
+        font-size: 2.2rem;
+    }
+}
+
+.feedbackDisplay2 {
+    -webkit-animation: feedbackDisplay2 0.2s ease-in-out 2 alternate;
+    -moz-animation: feedbackDisplay2 0.2s ease-in-out 2 alternate;
+    animation: feedbackDisplay2 0.2s ease-in-out 2 alternate;
+}
+
+@keyframes feedbackDisplay2 {
+    from {
+        text-shadow: 0 0 0 rgb(253, 228, 186);
+        font-size: 1.8rem;
+    }
+    to {
+        text-shadow: 0 0 10px rgb(253, 228, 186);
+        font-size: 2.2rem;
+    }
+}
+
+.currentDisplayFade {
+    color: rgba(165, 186, 194, 0.5);
+    font-size: 1.8rem;
+}
+
+#equal {
+    grid-column-start: 4;
+    grid-column-start: 5;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+#number0 { 
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
